@@ -1,0 +1,35 @@
+<div class="row">
+  <div class="col-4">
+    <side-menu
+      [entries]="menu"
+      title="Organisation">
+    </side-menu>
+  </div>
+  <div class="col pt-4">
+    <h2>Firmen-Stammdaten</h2>
+    <p>Hier können Sie Ihre Firmen-Stammdaten editieren.</p>
+
+    <form>
+      <div class="form-group pr-5">
+        <h4 class="py-3">Firmen-Stammdaten</h4>
+        <div *ngFor="let input of organisationInputs">
+          <input-field [data]="input"></input-field>
+        </div>
+        <h4 class="py-3">Kontakt-Daten</h4>
+        <div *ngFor="let input of contactInputs">
+          <input-field [data]="input"></input-field>
+        </div>
+
+        <div class="row justify-content-center py-4">
+          <div class="col-5">
+            <button class="btn btn-primary btn-block">
+              Änderungen speichern
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </form>
+
+  </div>
+</div>

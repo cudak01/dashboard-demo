@@ -1,0 +1,45 @@
+<div class="row">
+  <div class="col-4">
+    <side-menu
+      [entries]="menu"
+      title="Organisation">
+    </side-menu>
+  </div>
+  <div class="col pt-4">
+    <h2>Zentrale snapADDY Einstellungen</h2>
+    <p>Hier können Sie zentrale snapADDY Einstellungen editieren.</p>
+
+    <form>
+      <div class="form-group pr-5 py-3">
+        <div *ngFor="let entry of general_items">
+          <checkbox-item [data]="entry"></checkbox-item>
+        </div>
+      </div>
+    </form>
+
+    <hr class="mr-5 pb-4"/>
+
+    <h5>Login-Optionen</h5>
+
+    <form>
+      <div class="form-group pr-5 py-3">
+        <div *ngFor="let entry of login_items">
+          <checkbox-item [data]="entry"></checkbox-item>
+        </div>
+      </div>
+    </form>
+
+    <hr class="mr-5"/>
+
+    <div class="row justify-content-center py-4">
+      <div class="col-5">
+        <button class="btn btn-primary btn-block">
+          Änderungen speichern
+        </button>
+        <button class="btn btn-light btn-block mt-3">
+          CRM-Mappings editieren
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

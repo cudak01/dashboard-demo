@@ -1,0 +1,13 @@
+<div id="side-menu" class="my-4 pt-2 ml-4 mr-2">
+  <div class="pr-4">
+    <h4 class="pb-4 font-weight-bold">{{title}}</h4>
+    <div *ngIf="!isRoot">
+      <a class="btn btn-link" routerLink="/">< Zurück zur Übersicht</a>
+    </div>
+
+    <div *ngFor="let entry of entries">
+      <menu-button [data]="entry">
+      </menu-button>
+    </div>
+  </div>
+</div>

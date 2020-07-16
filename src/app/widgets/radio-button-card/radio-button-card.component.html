@@ -1,0 +1,26 @@
+<div class="card shadow-sm p-4 my-1 mr-5">
+  <div class="custom-control custom-radio">
+    <input type="radio"
+           class="custom-control-input"
+           id="{{data.label}}"
+           [value]="data.label"
+           [checked]="data.active">
+
+    <label class="custom-control-label"
+           for="{{data.label}}">
+      {{data.label}}
+    </label>
+  </div>
+
+  <div *ngIf="data.active" class="pt-4">
+    <p>{{data.description}}</p>
+    <div class="row justify-content-center py-2">
+      <div class="col-5">
+        <button class="btn btn-primary btn-block">
+          Mit Salesforce verbinden
+        </button>
+      </div>
+    </div>
+  </div>
+
+</div>

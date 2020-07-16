@@ -1,0 +1,8 @@
+<div class="form-group">
+  <label for="{{data.identifier}}">
+    {{data.label}}
+    <span *ngIf="data.mandatory" class="font-weight-bold text-danger">*</span>
+  </label>
+
+  <input [type]="data.inputType" class="form-control" id="{{data.identifier}}">
+</div>

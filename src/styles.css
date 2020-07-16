@@ -1,1 +1,17 @@
-/* You can add global styles to this file, and also import other style files */
+html, body {
+  background: #F5F5F5 !important;
+}
+#side-menu {
+  min-height: 90vh;
+  border-right: 1px solid lightgrey;
+}
+.btn-primary {
+  background-color: #9DA600 !important;
+  border-color: #9DA600 !important;
+}
+p, div {
+  color: #666666;
+}
+.navBg {
+  background-color: #9DA600;
+}

@@ -1,0 +1,42 @@
+<div class="row">
+  <div class="col-4">
+    <side-menu
+      [entries]="menu"
+      title="Profil">
+    </side-menu>
+  </div>
+  <div class="col pt-4 pr-5">
+    <h2>Zwei-Faktor Authentifizierung</h2>
+
+    <p class="pt-3">Die Zwei-Faktor-Authentifizierung fügt Ihrem Account eine zusätzliche Sicherheitsstufe hinzu. Beim Anmelden werden Sie nach einem Zwei-Faktor-Token gefragt.</p>
+
+    <p>Bitte scannen Sie zunächst den unten stehenden QR-Code mit einer Authenticator-App, um die Zwei-Faktor-Authentifizierung zu aktivieren.</p>
+
+    <p>Bitte geben Sie den Zwei-Faktor-Token aus Ihrer Authenticator-App ein, um die Aktivierung abzuschließen.</p>
+
+    <div class="row">
+      <div class="col-3">
+        <img class="img-thumbnail" src="https://www.wb-web.de/_Resources/Persistent/feb7a0d8ee35621aa5ac515bd019ed1e9f59746b/QRCode1.jpg">
+      </div>
+      <div class="col-8">
+        <form>
+          <div class="form-group pr-5">
+            <div *ngFor="let input of inputs">
+              <input-field [data]="input"></input-field>
+            </div>
+
+            <div class="row justify-content-center pt-4">
+              <div class="col-5">
+                <button class="btn btn-primary btn-block">
+                  Aktivieren
+                </button>
+              </div>
+            </div>
+
+          </div>
+        </form>
+      </div>
+    </div>
+
+  </div>
+</div>

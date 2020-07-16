@@ -1,0 +1,29 @@
+<div class="row">
+  <div class="col-4">
+    <side-menu
+      [entries]="menu"
+      title="Profil">
+    </side-menu>
+  </div>
+  <div class="col pt-4">
+    <h2>Profil-Informationen</h2>
+    <p>Hier können Sie Ihre Profildaten editieren.</p>
+
+    <form>
+      <div class="form-group pr-5">
+        <div *ngFor="let input of inputs">
+          <input-field [data]="input"></input-field>
+        </div>
+
+        <div class="row justify-content-center pt-4">
+          <div class="col-5">
+            <button class="btn btn-primary btn-block">
+              Änderungen speichern
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </form>
+  </div>
+</div>

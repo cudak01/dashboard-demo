@@ -1,0 +1,31 @@
+<div class="row">
+  <div class="col-4">
+    <side-menu
+      [entries]="menu"
+      title="Einstellungen"
+      isRoot="true">
+    </side-menu>
+  </div>
+  <div class="col pt-4">
+    <h2>Einstellungen</h2>
+    <p>Hier können Sie Ihre Einstellungen verwalten.</p>
+
+    <information-overview
+      [data]="profile"
+      title="Profil"
+      route="profile-information">
+    </information-overview>
+
+    <information-overview
+      [data]="organisation"
+      title="Organisation"
+      route="organisation-information">
+    </information-overview>
+
+    <information-overview
+      [data]="crmConnections"
+      title="CRM-Verbindungen"
+      route="crm-connections">
+    </information-overview>
+  </div>
+</div>
